@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="833.0" prefWidth="1516.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unipi.dii.lsmd.winewineryapp.controller.SpecialSearchController">
+        <children>
+                <AnchorPane fx:id="main_form" maxHeight="891.0" maxWidth="1682.0" minHeight="800.0" minWidth="1500.0" prefHeight="891.0" prefWidth="1682.0">
+                        <children>
+                                <BorderPane layoutX="79.0" layoutY="100.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+                                        <left>
+                                                <AnchorPane prefHeight="473.0" prefWidth="179.0" BorderPane.alignment="CENTER">
+                                                        <children>
+                                                                <AnchorPane prefHeight="616.0" prefWidth="203.0" styleClass="nav-form" stylesheets="@../style/mainMenu.css" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                        <children>
+
+                                                                                <Label layoutX="69.0" layoutY="117.0" text="Welcome," textFill="WHITE">
+                                                                                        <font>
+                                                                                                <Font name="Tahoma" size="17.0" />
+                                                                                        </font>
+                                                                                </Label>
+                                                                                <Label fx:id="username_side" alignment="CENTER" layoutX="9.0" layoutY="138.0" prefHeight="23.0" prefWidth="194.0" text="Username" textFill="WHITE">
+                                                                                        <font>
+                                                                                                <Font name="Arial Bold" size="20.0" />
+                                                                                        </font>
+                                                                                </Label>
+                                                                                <Line endX="69.0" layoutX="121.0" layoutY="178.0" startX="-100.0" stroke="WHITE" />
+                                                                                <Button fx:id="search_btn" layoutX="16.0" layoutY="207.0" mnemonicParsing="false" onAction="#gotosearch" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@../style/mainMenu.css" text="Search">
+                                                                                        <graphic>
+
+                                                                                        </graphic>
+                                                                                </Button>
+                                                                                <Button fx:id="gotomyprofile" layoutX="16.0" layoutY="278.0" mnemonicParsing="false" onAction="#gotomyprofile" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@../style/mainMenu.css" text="My profile">
+                                                                                        <graphic>
+
+                                                                                        </graphic>
+                                                                                </Button>
+                                                                                <Button fx:id="logout" layoutX="9.0" layoutY="750.0" mnemonicParsing="false" onAction="#logout" prefHeight="36.0" prefWidth="178.0" stylesheets="@../style/mainMenu.css" text="Logout" textFill="WHITE">
+                                                                                        <graphic>
+
+                                                                                        </graphic>
+                                                                                        <styleClass>
+                                                                                                <String fx:value="logout" />
+                                                                                                <String fx:value="shadow" />
+                                                                                        </styleClass>
+                                                                                </Button>
+                                                                                <Button fx:id="suggestion" layoutX="16.0" layoutY="242.0" mnemonicParsing="false" onAction="#gotosuggestion" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@../style/mainMenu.css" text="Suggestion" />
+                                                                        </children>
+                                                                </AnchorPane>
+                                                        </children>
+                                                </AnchorPane>
+                                        </left>
+                                        <center>
+                                                <AnchorPane prefHeight="600.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+                                                        <children>
+                                                                <BorderPane prefHeight="200.0" prefWidth="897.0" stylesheets="@../style/mainMenu.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                        <center>
+                                                                                <VBox prefHeight="364.0" prefWidth="897.0" BorderPane.alignment="CENTER">
+                                                                                        <children>
+                                                                                                <HBox alignment="CENTER_LEFT" prefHeight="11.0" prefWidth="837.0">
+                                                                                                        <children>
+                                                                                                                <Button fx:id="backBTN" disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="38.0">
+                                                                                                                        <graphic>
+                                                                                                                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="white-bg">
+                                                                                                                                        <image>
+                                                                                                                                                <Image url="@../img/back.png" />
+                                                                                                                                        </image>
+                                                                                                                                </ImageView>
+                                                                                                                        </graphic>
+                                                                                                                        <styleClass>
+                                                                                                                                <String fx:value="buttonlog" />
+                                                                                                                                <String fx:value="dynamic-button" />
+                                                                                                                        </styleClass>
+                                                                                                                </Button>
+                                                                                                                <Label fx:id="errorTf" prefHeight="43.0" prefWidth="1983.0" textAlignment="CENTER" textFill="RED">
+                                                                                                                        <HBox.margin>
+                                                                                                                                <Insets left="20.0" />
+                                                                                                                        </HBox.margin>
+                                                                                                                        <padding>
+                                                                                                                                <Insets left="450.0" />
+                                                                                                                        </padding>
+                                                                                                                </Label>
+                                                                                                                <HBox alignment="TOP_RIGHT" prefHeight="53.0" prefWidth="1206.0" HBox.hgrow="ALWAYS">
+                                                                                                                        <children>
+                                                                                                                                <Button fx:id="nextBTN" disable="true" minHeight="43.0" minWidth="40.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="45.0">
+                                                                                                                                        <graphic>
+                                                                                                                                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="white-bg">
+                                                                                                                                                        <image>
+                                                                                                                                                                <Image url="@../img/next.png" />
+                                                                                                                                                        </image>
+                                                                                                                                                </ImageView>
+                                                                                                                                        </graphic>
+                                                                                                                                        <styleClass>
+                                                                                                                                                <String fx:value="buttonlog" />
+                                                                                                                                                <String fx:value="dynamic-button" />
+                                                                                                                                        </styleClass>
+                                                                                                                                </Button>
+                                                                                                                        </children>
+                                                                                                                        <HBox.margin>
+                                                                                                                                <Insets bottom="5.0" />
+                                                                                                                        </HBox.margin>
+                                                                                                                </HBox>
+                                                                                                        </children>
+                                                                                                        <opaqueInsets>
+                                                                                                                <Insets left="30.0" right="30.0" />
+                                                                                                        </opaqueInsets>
+                                                                                                        <VBox.margin>
+                                                                                                                <Insets left="20.0" right="20.0" top="10.0" />
+                                                                                                        </VBox.margin>
+                                                                                                </HBox>
+                                                                                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="1273.0" VBox.vgrow="ALWAYS">
+                                                                                                        <children>
+                                                                                                                <ScrollPane prefHeight="259.0" prefWidth="1273.0">
+                                                                                                                        <content>
+                                                                                                                                <GridPane fx:id="cardsGrid" alignment="CENTER" prefHeight="318.0" prefWidth="1272.0">
+                                                                                                                                        <columnConstraints>
+                                                                                                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                                                                                        </columnConstraints>
+                                                                                                                                        <rowConstraints>
+                                                                                                                                                <RowConstraints />
+                                                                                                                                        </rowConstraints>
+                                                                                                                                </GridPane>
+                                                                                                                        </content>
+                                                                                                                </ScrollPane>
+                                                                                                        </children>
+                                                                                                        <VBox.margin>
+                                                                                                                <Insets bottom="20.0" left="20.0" right="20.0" />
+                                                                                                        </VBox.margin>
+                                                                                                </HBox>
+                                                                                                <HBox fx:id="WineParameters" prefHeight="197.0" prefWidth="1284.0" visible="false">
+                                                                                                        <children>
+                                                                                                                <VBox prefHeight="170.0" prefWidth="498.0">
+                                                                                                                        <children>
+                                                                                                                                <SplitPane dividerPositions="0.29797979797979796" prefHeight="100.0" prefWidth="498.0">
+                                                                                                                                        <items>
+                                                                                                                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                                                                                                                        <children>
+                                                                                                                                                                <Text layoutX="36.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max Year" />
+                                                                                                                                                                <Text layoutX="39.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min Year" />
+                                                                                                                                                        </children>
+                                                                                                                                                </AnchorPane>
+                                                                                                                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="89.0" prefWidth="345.0">
+                                                                                                                                                        <children>
+                                                                                                                                                                <Slider fx:id="MaxYearWine" blockIncrement="1.0" layoutX="14.0" layoutY="14.0" majorTickUnit="20.0" max="2023.0" min="1950.0" minorTickCount="1" prefHeight="16.0" prefWidth="240.0" showTickLabels="true" showTickMarks="true" />
+                                                                                                                                                                <Slider fx:id="MinYearWine" blockIncrement="1.0" layoutX="14.0" layoutY="55.0" majorTickUnit="20.0" max="2023.0" min="1950.0" minorTickCount="1" prefHeight="16.0" prefWidth="240.0" showTickLabels="true" />
+                                                                                                                                                                <Label fx:id="MaxYearLabel" layoutX="270.0" layoutY="12.0" prefHeight="17.0" prefWidth="52.0" text="" />
+                                                                                                                                                                <Label fx:id="MinYearLabel" layoutX="272.0" layoutY="55.0" prefHeight="17.0" prefWidth="46.0" text="" />
+                                                                                                                                                        </children>
+                                                                                                                                                </AnchorPane>
+                                                                                                                                        </items>
+                                                                                                                                        <VBox.margin>
+                                                                                                                                                <Insets bottom="5.0" left="20.0" />
+                                                                                                                                        </VBox.margin>
+                                                                                                                                </SplitPane>
+                                                                                                                                <SplitPane dividerPositions="0.29797979797979796" prefHeight="108.0" prefWidth="498.0">
+                                                                                                                                        <items>
+                                                                                                                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="168.0" prefWidth="105.0">
+                                                                                                                                                        <children>
+                                                                                                                                                                <Text layoutX="36.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max Price" />
+                                                                                                                                                                <Text layoutX="39.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min Price" />
+                                                                                                                                                        </children>
+                                                                                                                                                </AnchorPane>
+                                                                                                                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="115.0" prefWidth="345.0">
+                                                                                                                                                        <children>
+                                                                                                                                                                <Slider fx:id="MaxPriceWine" layoutX="14.0" layoutY="14.0" majorTickUnit="200.0" max="1000.0" prefHeight="16.0" prefWidth="240.0" showTickLabels="true" />
+                                                                                                                                                                <Slider fx:id="MinPriceWine" layoutX="14.0" layoutY="51.0" majorTickUnit="200.0" max="1000.0" prefHeight="16.0" prefWidth="240.0" showTickLabels="true" />
+                                                                                                                                                                <Label fx:id="MaxPriceLabel" layoutX="275.0" layoutY="12.0" prefHeight="17.0" prefWidth="46.0" text="" />
+                                                                                                                                                                <Label fx:id="MinPriceLabel" layoutX="276.0" layoutY="51.0" prefHeight="17.0" prefWidth="38.0" text="" />
+                                                                                                                                                        </children>
+                                                                                                                                                </AnchorPane>
+                                                                                                                                        </items>
+                                                                                                                                        <VBox.margin>
+                                                                                                                                                <Insets bottom="5.0" left="20.0" />
+                                                                                                                                        </VBox.margin>
+                                                                                                                                </SplitPane>
+                                                                                                                        </children>
+                                                                                                                </VBox>
+                                                                                                                <SplitPane dividerPositions="0.296875" prefHeight="156.0" prefWidth="482.0">
+                                                                                                                        <items>
+                                                                                                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="126.0">
+                                                                                                                                        <children>
+                                                                                                                                                <Text layoutX="37.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country" />
+                                                                                                                                                <Text layoutX="39.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Varietal" />
+                                                                                                                                                <Text layoutX="39.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grapes" />
+                                                                                                                                                <Text layoutX="31.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Winemaker" />
+                                                                                                                                        </children>
+                                                                                                                                </AnchorPane>
+                                                                                                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="333.0">
+                                                                                                                                        <children>
+                                                                                                                                                <TextField fx:id="keywordGrapesWine" alignment="CENTER" layoutX="24.0" layoutY="79.0" prefHeight="27.0" prefWidth="254.0" promptText="Search by keywords" styleClass="transparent">
+                                                                                                                                                        <font>
+                                                                                                                                                                <Font size="14.0" />
+                                                                                                                                                        </font>
+                                                                                                                                                </TextField>
+                                                                                                                                                <TextField fx:id="keywordVarietalWine" alignment="CENTER" layoutX="24.0" layoutY="46.0" prefHeight="27.0" prefWidth="254.0" promptText="Search by keywords" styleClass="transparent">
+                                                                                                                                                        <font>
+                                                                                                                                                                <Font size="14.0" />
+                                                                                                                                                        </font>
+                                                                                                                                                </TextField>
+                                                                                                                                                <TextField fx:id="keywordCountryWine" alignment="CENTER" layoutX="24.0" layoutY="13.0" prefHeight="27.0" prefWidth="254.0" promptText="Search by keywords" styleClass="transparent">
+                                                                                                                                                        <font>
+                                                                                                                                                                <Font size="14.0" />
+                                                                                                                                                        </font>
+                                                                                                                                                </TextField>
+                                                                                                                                                <TextField fx:id="keywordWinemakerWine" alignment="CENTER" layoutX="24.0" layoutY="113.0" prefHeight="27.0" prefWidth="254.0" promptText="Search by keywords" styleClass="transparent">
+                                                                                                                                                        <font>
+                                                                                                                                                                <Font size="14.0" />
+                                                                                                                                                        </font>
+                                                                                                                                                </TextField>
+                                                                                                                                        </children>
+                                                                                                                                </AnchorPane>
+                                                                                                                        </items>
+                                                                                                                        <HBox.margin>
+                                                                                                                                <Insets bottom="5.0" left="20.0" />
+                                                                                                                        </HBox.margin>
+                                                                                                                </SplitPane>
+                                                                                                        </children>
+                                                                                                        <VBox.margin>
+                                                                                                                <Insets bottom="10.0" />
+                                                                                                        </VBox.margin>
+                                                                                                </HBox>
+                                                                                        </children>
+                                                                                </VBox>
+                                                                        </center>
+                                                                        <top>
+                                                                                <HBox prefHeight="60.0" prefWidth="1313.0" BorderPane.alignment="CENTER">
+                                                                                        <children>
+                                                                                                <Pane prefHeight="60.0" prefWidth="121.0" />
+                                                                                                <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                                                        <children>
+                                                                                                                <CheckBox fx:id="SugCHECK" mnemonicParsing="false" onAction="#handleCheckBoxAction" prefHeight="18.0" prefWidth="95.0" text="Suggestion" />
+                                                                                                                <CheckBox fx:id="AnaCHECK" mnemonicParsing="false" onAction="#handleCheckBoxAction" text="Analitycs">
+                                                                                                                        <VBox.margin>
+                                                                                                                                <Insets top="5.0" />
+                                                                                                                        </VBox.margin>
+                                                                                                                </CheckBox>
+                                                                                                        </children>
+                                                                                                        <HBox.margin>
+                                                                                                                <Insets left="20.0" top="10.0" />
+                                                                                                        </HBox.margin>
+                                                                                                </VBox>
+                                                                                                <Pane prefHeight="60.0" prefWidth="121.0" />
+                                                                                                <VBox prefHeight="60.0" prefWidth="269.0">
+                                                                                                        <children>
+                                                                                                                <ComboBox fx:id="ResearchType" onAction="#switchSearch" prefHeight="39.0" prefWidth="238.0" promptText="Choose Option" styleClass="transparent" visible="false">
+                                                                                                                        <VBox.margin>
+                                                                                                                                <Insets bottom="5.0" right="10.0" top="10.0" />
+                                                                                                                        </VBox.margin>
+                                                                                                                </ComboBox>
+                                                                                                        </children>
+                                                                                                        <HBox.margin>
+                                                                                                                <Insets left="30.0" />
+                                                                                                        </HBox.margin>
+                                                                                                </VBox>
+                                                                                                <VBox  prefHeight="60.0" prefWidth="126.0">
+                                                                                                        <children>
+                                                                                                                <ComboBox fx:id="PeriodBox" prefHeight="40.0" prefWidth="126.0" promptText="Choose Period">
+                                                                                                                        <opaqueInsets>
+                                                                                                                                <Insets />
+                                                                                                                        </opaqueInsets>
+                                                                                                                        <VBox.margin>
+                                                                                                                                <Insets top="10.0" />
+                                                                                                                        </VBox.margin>
+                                                                                                                </ComboBox>
+                                                                                                        </children>
+                                                                                                        <opaqueInsets>
+                                                                                                                <Insets />
+                                                                                                        </opaqueInsets>
+                                                                                                        <HBox.margin>
+                                                                                                                <Insets right="40.0" />
+                                                                                                        </HBox.margin></VBox>
+                                                                                                <Button fx:id="searchBTN" disable="true" onAction="#startResearch" prefHeight="40.0" prefWidth="220.0" text="View">
+                                                                                                        <styleClass>
+                                                                                                                <String fx:value="clear-btn" />
+                                                                                                                <String fx:value="dynamic-button" />
+                                                                                                        </styleClass>
+                                                                                                        <font>
+                                                                                                                <Font name="System Bold" size="15.0" />
+                                                                                                        </font>
+                                                                                                        <HBox.margin>
+                                                                                                                <Insets left="10.0" top="10.0" />
+                                                                                                        </HBox.margin>
+                                                                                                </Button>
+                                                                                        </children>
+                                                                                        <BorderPane.margin>
+                                                                                                <Insets top="10.0" />
+                                                                                        </BorderPane.margin>
+                                                                                </HBox>
+                                                                        </top>
+                                                                </BorderPane>
+                                                        </children>
+                                                </AnchorPane>
+                                        </center>
+                                </BorderPane>
+                        </children>
+                </AnchorPane>
+        </children>
+</StackPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="it.unipi.dii.lsmd.winewineryapp.controller.LoginController"
+            prefHeight="900.0" prefWidth="600.0"
+            stylesheets="@../style/login.css">
+    <Label
+            styleClass="title"
+            AnchorPane.topAnchor="70"
+            AnchorPane.leftAnchor="10"
+            AnchorPane.rightAnchor="10"
+    >LOGIN</Label>
+    <VBox
+            alignment="CENTER"
+            spacing="20"
+            AnchorPane.topAnchor="170"
+            AnchorPane.leftAnchor="10"
+            AnchorPane.rightAnchor="10">
+        <!--Label VBox -->
+        <VBox alignment="CENTER">
+            <Label styleClass="labels">Username</Label>
+            <TextField fx:id="username" styleClass="fields"/>
+        </VBox>
+        <VBox alignment="CENTER">
+            <Label styleClass="labels">Password</Label>
+            <PasswordField fx:id="password" styleClass="fields" />
+        </VBox>
+        <Button styleClass="login" text="Login" onAction="#login" />
+        <Button styleClass="home" text="Home" onAction="#onButtonBack" />
+        <Label fx:id="errorField" styleClass="error" />
+    </VBox>
+
+</AnchorPane>
+
+
