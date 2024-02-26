@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="82.0" prefWidth="800.0" styleClass="wineryelement" stylesheets="@../style/mainMenu.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unipi.dii.lsmd.winewineryapp.controller.WineryElementController">
+    <children>
+        <VBox prefHeight="82.0" prefWidth="800.0" styleClass="wineryelement" stylesheets="@../style/mainMenu.css">
+            <children>
+                <HBox alignment="CENTER" prefHeight="45.0" prefWidth="685.0">
+                    <children>
+                        <Label fx:id="WineryTitle" prefHeight="33.0" prefWidth="529.0" style="-fx-line-spacing: 5;" stylesheets="@../style/mainMenu.css" text="Title" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                            <padding>
+                                <Insets left="10.0" top="10.0" />
+                            </padding>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <styleClass>
+                                <String fx:value="dynamic-effect" />
+                                <String fx:value="title" />
+                            </styleClass>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="251.0" style="-fx-spacing: 5;">
+                            <children>
+                                <Label fx:id="analyticLabelName" text="AnalyticLabelName" />
+                                <Text fx:id="analyticValue" strokeType="OUTSIDE" strokeWidth="0.0" text="AnalyticValue" />
+                            </children>
+                            <padding>
+                                <Insets right="5.0" />
+                            </padding>
+                        </HBox>
+                    </children>
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="467.0">
+                    <children>
+                        <Label text="created by" textAlignment="CENTER">
+                            <HBox.margin>
+                                <Insets left="30.0" right="10.0" />
+                            </HBox.margin>
+                        </Label>
+                        <Text fx:id="ownerText" strokeType="OUTSIDE" strokeWidth="0.0" text="Owner" wrappingWidth="444.783203125" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </HBox>
+                <HBox prefHeight="0.0" prefWidth="591.0" />
+            </children>
+            <effect>
+                <Blend />
+            </effect>
+        </VBox>
+    </children>
+</AnchorPane>

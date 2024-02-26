@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="833.0" prefWidth="1516.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unipi.dii.lsmd.winewineryapp.controller.ProfileController">
+    <children>
+        <AnchorPane fx:id="main_form" maxHeight="891.0" maxWidth="1682.0" minHeight="800.0" minWidth="1500.0" prefHeight="891.0" prefWidth="1682.0">
+            <children>
+                <BorderPane layoutX="79.0" layoutY="100.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <left>
+                        <AnchorPane prefHeight="473.0" prefWidth="179.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane prefHeight="616.0" prefWidth="213.0" styleClass="nav-form" stylesheets="@../style/mainMenu.css" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <Label layoutX="69.0" layoutY="117.0" text="Welcome," textFill="WHITE">
+                                            <font>
+                                                <Font name="Tahoma" size="17.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="username_side" alignment="CENTER" layoutX="9.0" layoutY="138.0" prefHeight="23.0" prefWidth="194.0" text="Username" textFill="WHITE">
+                                            <font>
+                                                <Font name="Arial Bold" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Line endX="69.0" layoutX="121.0" layoutY="178.0" startX="-100.0" stroke="WHITE" />
+                                        <Button fx:id="search_btn" layoutX="16.0" layoutY="207.0" mnemonicParsing="false" onAction="#gotosearch" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@../style/mainMenu.css" text="Search">
+                                            <graphic>
+                                            </graphic>
+                                        </Button>
+                                        <Button fx:id="suggestion" layoutX="16.0" layoutY="242.0" mnemonicParsing="false" onAction="#gotosuggestion" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@../style/mainMenu.css" text="Suggestion">
+                                            <graphic>
+                                            </graphic>
+                                        </Button>
+                                        <Button fx:id="myprofile_btn" layoutX="16.0" layoutY="278.0" mnemonicParsing="false" onAction="#gotomyprofile" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@../style/mainMenu.css" text="My profile">
+                                            <graphic>
+                                            </graphic>
+                                        </Button>
+                                        <Button fx:id="logout" layoutX="9.0" layoutY="750.0" mnemonicParsing="false" onAction="#logout" prefHeight="36.0" prefWidth="178.0" stylesheets="@../style/mainMenu.css" text="Logout" textFill="WHITE">
+                                            <graphic>
+                                            </graphic>
+                                            <styleClass>
+                                                <String fx:value="logout" />
+                                                <String fx:value="shadow" />
+                                            </styleClass>
+                                        </Button>
+
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </left>
+                    <center>
+                        <AnchorPane prefHeight="833.0" prefWidth="1388.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane fx:id="userProfile" layoutX="17.0" layoutY="21.0" prefHeight="785.0" prefWidth="1280.0" styleClass="white-bg" stylesheets="@../style/mainMenu.css">
+                                    <children>
+                                        <!-- Immagine del Profilo -->
+                                        <ImageView fx:id="profileImage" fitHeight="125.0" fitWidth="125.0" layoutX="150.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../img/user.jpg" /> <!-- Sostituisci con il percorso corretto -->
+                                            </image>
+                                        </ImageView>
+
+                                        <!-- Nome Utente -->
+                                        <Label fx:id="username" layoutX="300.0" layoutY="25.0" text="Nome Utente" textFill="BLACK">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+
+                                        <!-- Email  -->
+                                        <Label layoutX="300.0" layoutY="65.0" text="Email:" textFill="BLACK" />
+                                        <Label fx:id="email" layoutX="380.0" layoutY="65.0" text="example@example.com" textFill="BLACK" />
+
+                                        <!-- nome  -->
+                                        <Label layoutX="300.0" layoutY="85.0" text="Firstname:" textFill="BLACK" />
+                                        <Label fx:id="firstname" layoutX="380.0" layoutY="85.0" text="firstname" textFill="BLACK" />
+
+                                        <!-- cognome  -->
+                                        <Label layoutX="300.0" layoutY="105.0" text="Lastname:" textFill="BLACK" />
+                                        <Label fx:id="lastname" layoutX="380.0" layoutY="105.0" text="lastname" textFill="BLACK" />
+
+                                        <!-- eta -->
+                                        <Label layoutX="300.0" layoutY="125.0" text="Age:" textFill="BLACK" />
+                                        <Label fx:id="age" layoutX="380.0" layoutY="125.0" text="age" textFill="BLACK" />
+
+
+                                    </children>
+                                    <!-- AnchorPane user stat -->
+                                    <AnchorPane layoutX="64.0" layoutY="177.0" prefHeight="100.0" prefWidth="1121.0" stylesheets="@../style/mainMenu.css">
+                                        <styleClass>
+                                            <String fx:value="white-bg" />
+                                            <String fx:value="shadow" />
+                                        </styleClass>
+                                        <children>
+                                            <Pane layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="240.0" styleClass="card" stylesheets="@../style/mainMenu.css">
+                                                <children>
+                                                    <Label layoutX="90.0" layoutY="44.0" prefHeight="18.0" prefWidth="63.0" text="Followers" textAlignment="CENTER" textFill="WHITE" />
+                                                    <Label fx:id="nFollower" alignment="CENTER" layoutX="90.0" layoutY="14.0" prefHeight="1.0" prefWidth="54.0" text="F" textAlignment="CENTER" textFill="#c5f241">
+                                                        <font>
+                                                            <Font size="22.0" />
+                                                        </font>
+                                                    </Label>
+                                                    <Button fx:id="ShowFollowerBTN" layoutX="95.0" layoutY="16.0" mnemonicParsing="false" opacity="0.0" text="Button" />
+                                                </children>
+                                            </Pane>
+                                            <Pane layoutX="440.0" layoutY="10.0" prefHeight="80.0" prefWidth="240.0" styleClass="card" stylesheets="@../style/mainMenu.css">
+                                                <children>
+                                                    <Label layoutX="86.0" layoutY="44.0" prefHeight="18.0" prefWidth="67.0" text="Following" textAlignment="CENTER" textFill="WHITE" />
+                                                    <Label fx:id="nFollowing" alignment="CENTER" layoutX="86.0" layoutY="13.0" prefHeight="1.0" prefWidth="54.0" text="F" textAlignment="CENTER" textFill="#c4f041">
+                                                        <font>
+                                                            <Font size="22.0" />
+                                                        </font>
+                                                    </Label>
+                                                    <Button fx:id="ShowFollowingBTN" layoutX="86.0" layoutY="15.0" mnemonicParsing="false" opacity="0.0" text="Button" />
+                                                </children>
+                                                <cursor>
+                                                    <Cursor fx:constant="DEFAULT" />
+                                                </cursor>
+                                            </Pane>
+                                            <Pane layoutX="868.0" layoutY="11.0" prefHeight="80.0" prefWidth="240.0" styleClass="card" stylesheets="@../style/mainMenu.css">
+                                                <children>
+                                                    <Label layoutX="89.0" layoutY="43.0" prefHeight="1.0" prefWidth="60.0" text="Winerys" textAlignment="CENTER" textFill="WHITE" />
+                                                    <Label fx:id="nWinerys" alignment="CENTER" layoutX="84.0" layoutY="13.0" prefHeight="1.0" prefWidth="54.0" text="F" textAlignment="CENTER" textFill="#c5f241">
+                                                        <font>
+                                                            <Font size="22.0" />
+                                                        </font>
+                                                    </Label>
+                                                </children>
+                                            </Pane>
+                                        </children>
+                                    </AnchorPane>
+                                    <!-- CONTAINER WINERY -->
+                                    <AnchorPane fx:id="WineryContainer" layoutX="66.0" layoutY="345.0" prefHeight="432.0" prefWidth="1000.0" stylesheets="@../style/mainMenu.css">
+                                        <styleClass>
+                                            <String fx:value="white-bg" />
+                                            <String fx:value="shadow" />
+                                        </styleClass>
+                                        <children>
+                                            <Label layoutX="25.0" layoutY="25.0" text="Winerys list" textFill="BLACK">
+                                                <font>
+                                                    <Font name="Arial" size="20.0" />
+                                                </font>
+                                            </Label>
+
+                                            <ScrollPane layoutY="66.0" prefHeight="363.0" prefWidth="1108.0" VBox.vgrow="ALWAYS">
+                                                <content>
+                                                    <VBox fx:id="winerybox" alignment="TOP_CENTER" prefHeight="353.0" prefWidth="1101.0" spacing="5.0">
+                                                        <padding>
+                                                            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                                        </padding>
+
+                                                    </VBox>
+                                                </content>
+                                                <padding>
+                                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                </padding>
+                                            </ScrollPane>
+
+                                        </children>
+
+                                    </AnchorPane>
+                                    <HBox layoutX="326.0" layoutY="287.0" prefHeight="40.0" prefWidth="588.0">
+                                        <children>
+                                            <Button fx:id="EditBTN" mnemonicParsing="false" prefHeight="31.0" prefWidth="195.0" styleClass="delete-btn" stylesheets="@../style/mainMenu.css" text="Edit Info">
+                                                <HBox.margin>
+                                                    <Insets left="5.0" />
+                                                </HBox.margin></Button>
+                                            <Button fx:id="DeleteUserBTN" mnemonicParsing="false" prefHeight="31.0" prefWidth="190.0" styleClass="delete-btn" text="Delete User" visible="false" HBox.hgrow="ALWAYS">
+                                                <HBox.margin>
+                                                    <Insets left="20.0" />
+                                                </HBox.margin>
+                                            </Button>
+                                            <Button fx:id="AddWineryBTN" mnemonicParsing="false" prefHeight="31.0" prefWidth="190.0" styleClass="clear-btn" text="Add Winery">
+                                                <HBox.margin>
+                                                    <Insets left="20.0" />
+                                                </HBox.margin>
+                                            </Button>
+                                        </children>
+                                    </HBox>
+                                    <Button fx:id="FollowBTN" layoutX="592.0" layoutY="59.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="190.0" styleClass="add-btn" text="Follow" />
+                                    <Button fx:id="BackBTN" layoutX="36.0" layoutY="14.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="80.0" stylesheets="@../style/mainMenu.css">
+                                        <graphic>
+                                            <ImageView fitHeight="36.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                    <Image url="@../img/back.png" />
+                                                </image>
+                                                <cursor>
+                                                    <Cursor fx:constant="HAND" />
+                                                </cursor>
+                                            </ImageView>
+                                        </graphic>
+                                        <styleClass>
+                                            <String fx:value="white-bg" />
+                                            <String fx:value="dynamic-button" />
+                                        </styleClass>
+                                    </Button>
+                                    <Button fx:id="ElectModBTN" layoutX="819.0" layoutY="59.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="190.0" styleClass="add-btn" text="Elect moderator" />
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </center>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

@@ -1,0 +1,65 @@
+.root {
+    -fx-font-family: Avenir-bold;
+    -fx-font-size: 24;
+    -fx-background-color: #fefefa;
+}
+
+.fields {
+    -fx-width: 200;
+    -fx-background-radius: 15;
+}
+
+.error {
+    -fx-text-fill: red;
+    -fx-text-alignment: CENTER;
+}
+
+.login {
+    -fx-min-width: 185;
+    -fx-font-family: Avenir-bold;
+    -fx-background-radius: 15;
+    -fx-background-color: #111b35;
+    -fx-text-fill: #fefefa;
+}
+
+.title {
+    -fx-font-family: Avenir-bold;
+    -fx-font-size: 50;
+    -fx-text-fill: #111b35 ;
+    -fx-min-width: 200;
+    -fx-text-alignment: CENTER;
+    -fx-alignment: CENTER;
+}
+
+.home {
+    -fx-min-width: 185;
+    -fx-font-family: Avenir-bold;
+    -fx-background-radius: 15;
+    -fx-background-color: #2f97ce;
+    -fx-text-fill: #fefefa;
+}
+
+.labels{
+    -fx-text-fill: #111b35;
+}
+.s_labels {
+    -fx-font-size: 16;
+    -fx-text-fill: #111b35;
+}
+
+.signin {
+    -fx-min-width: 185;
+    -fx-font-family: Avenir-bold;
+    -fx-background-radius: 15;
+    -fx-background-color: #111b35;
+    -fx-text-fill: #fefefa;
+}
+
+.s_title {
+    -fx-font-family: Avenir-bold;
+    -fx-font-size: 50;
+    -fx-text-fill: #111b35;
+    -fx-min-width: 200;
+    -fx-text-alignment: CENTER;
+    -fx-alignment: CENTER;
+}

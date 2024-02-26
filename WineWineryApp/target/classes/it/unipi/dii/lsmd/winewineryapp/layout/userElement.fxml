@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane pickOnBounds="false" prefHeight="203.0" prefWidth="218.0" stylesheets="@../style/mainMenu.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unipi.dii.lsmd.winewineryapp.controller.UserElementController">
+    <styleClass>
+        <String fx:value="lite" />
+        <String fx:value="card" />
+    </styleClass>
+    <children>
+      <Pane layoutX="6.0" layoutY="75.0" prefHeight="109.0" prefWidth="206.0" styleClass="white-bg" stylesheets="@../style/mainMenu.css" />
+        <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="-5.0" prefHeight="200.0" prefWidth="130.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="-5.0">
+            <children>
+                <Label fx:id="usernameLb" alignment="CENTER" onMouseClicked="#showProfile" prefHeight="23.0" prefWidth="153.0" text="Username" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <styleClass>
+                        <String fx:value="dynamic-effect" />
+                        <String fx:value="title" />
+                    </styleClass>
+                    <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                    </VBox.margin>
+                </Label>
+                <ImageView fx:id="imageProfile" fitHeight="117.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/user.jpg" />
+                    </image>
+                </ImageView>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="67.0" prefWidth="110.0" HBox.hgrow="ALWAYS">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="2.0" top="5.0" />
+                            </HBox.margin>
+                            <children>
+                                <Text fx:id="emailTf" fill="#070000" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" textAlignment="CENTER" wrappingWidth="189.0448989868164">
+                           <font>
+                              <Font size="12.0" />
+                           </font></Text>
+                                <HBox alignment="TOP_CENTER" prefHeight="17.0" prefWidth="172.0" style="-fx-spacing: 5;">
+                                    <children>
+                                        <Label fx:id="analyticLabelName" prefHeight="17.0" prefWidth="92.0" text="Num Bottle" textFill="#6b1c1c" />
+                                        <Text fx:id="analyticValue" fill="#9e0707" strokeType="OUTSIDE" strokeWidth="0.0" text="Value" wrappingWidth="36.484375">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
